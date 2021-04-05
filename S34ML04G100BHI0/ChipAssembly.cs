@@ -2,7 +2,7 @@ using NAND_Prog;
 using System;
 using System.ComponentModel.Composition;
 
-namespace S34ML01G100TF100
+namespace S34ML04G100BHI0
 {
     /*
      use the design :
@@ -33,7 +33,7 @@ namespace S34ML01G100TF100
         ChipAssembly()
         {
             myChip.devManuf = "Spansion";
-            myChip.name = "S34ML01G100TF100";
+            myChip.name = "S34ML04G100BHI0";
             myChip.chipID = "01F1001D";      // device ID - 01h F1h 00h 1Dh 
 
             myChip.width = Organization.x8;    // chip width - 8 bit
@@ -107,7 +107,7 @@ namespace S34ML01G100TF100
 
            // if (BitConverter.ToString(content).Replace("-", "") != "ECF1001540")
            // {
-           //     messsage += "This chip is not a S34ML01G100TF100";
+           //     messsage += "This chip is not a S34ML04G100BHI0";
            //     return messsage;
            // }
            
@@ -150,9 +150,9 @@ namespace S34ML01G100TF100
                 case 1:
                     str_result += "Device ";
                     if (bt == 0xF1)
-                        str_result += "is S34ML01G100TF100";
+                        str_result += "is S34ML04G100BHI0";
                     else
-                        str_result += "is not S34ML01G100TF100";
+                        str_result += "is not S34ML04G100BHI0";
                     str_result += Environment.NewLine;
                     break;
 
