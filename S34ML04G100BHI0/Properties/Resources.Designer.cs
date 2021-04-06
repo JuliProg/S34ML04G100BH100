@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace S34ML04G100BHI0.Properties {
+namespace S34ML04G100BH100.Properties {
     using System;
     
     

@@ -2,7 +2,7 @@ using NAND_Prog;
 using System;
 using System.ComponentModel.Composition;
 
-namespace S34ML04G100BHI0
+namespace S34ML04G100BH100
 {
     /*
      use the design :
@@ -33,7 +33,7 @@ namespace S34ML04G100BHI0
         ChipAssembly()
         {
             myChip.devManuf = "Spansion";
-            myChip.name = "S34ML04G100BHI0";
+            myChip.name = "S34ML04G100BH100";
             myChip.chipID = "01DC909554";      // device ID - 01h/DCh/90h/95h/54h
 
             myChip.width = Organization.x8;    // chip width - 8 bit
