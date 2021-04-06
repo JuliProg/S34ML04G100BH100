@@ -1,16 +1,17 @@
-![Create new chip](https://github.com/JuliProg/S34ML04G100BHI0/workflows/Create%20new%20chip/badge.svg?event=repository_dispatch)
-![ChipUpdate](https://github.com/JuliProg/S34ML04G100BHI0/workflows/ChipUpdate/badge.svg)
+![Create new chip](https://github.com/JuliProg/S34ML04G100BH100/workflows/Create%20new%20chip/badge.svg?event=repository_dispatch)
+![ChipUpdate](https://github.com/JuliProg/S34ML04G100BH100/workflows/ChipUpdate/badge.svg)
 # Join the development of the project ([list of tasks](https://github.com/users/JuliProg/projects/1))
 
 
-# S34ML04G100BHI0
-Implementation of the S34ML04G100BHI0 chip for the JuliProg programmer
+# S34ML04G100BH100
+Implementation of the S34ML04G100BH100 chip for the JuliProg programmer
 
 Dependency injection, DI based on MEF framework is used to connect the chip to the programmer.
 
 <section class = "listing">
 
-# Chip parameters
+# Chip parameters
+
 ```c#
 
 
@@ -37,7 +38,8 @@ Dependency injection, DI based on MEF framework is used to connect the chip to t
             myChip.vcc = Vcc.v3_3;             // supply voltage
 
 ```
-# Chip operations
+# Chip operations
+
 ```c#
 
 
@@ -49,7 +51,8 @@ Dependency injection, DI based on MEF framework is used to connect the chip to t
                    Operations("PageProgram_80h_10h");
 
 ```
-# Initial Invalid Block (s)
+# Initial Invalid Block (s)
+
 ```c#
 
             
@@ -58,7 +61,8 @@ Dependency injection, DI based on MEF framework is used to connect the chip to t
             myChip.InitialInvalidBlock = "InitInvalidBlock_v2";
                 
 ```
-# Chip registers (optional)
+# Chip registers (optional)
+
 ```c#
 
 
@@ -85,7 +89,8 @@ Dependency injection, DI based on MEF framework is used to connect the chip to t
               Operations("ReadParameterPage_ECh");
 
 ```
-# Interpretation of ID-register values ​​(optional)
+# Interpretation of ID-register values ​​(optional)
+
 ```c#
 
 
