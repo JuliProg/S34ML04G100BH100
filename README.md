@@ -24,16 +24,16 @@ Dependency injection, DI based on MEF framework is used to connect the chip to t
         {
             myChip.devManuf = "Spansion";
             myChip.name = "S34ML04G100BHI0";
-            myChip.chipID = "01F1001D";      // device ID - 01h F1h 00h 1Dh 
+            myChip.chipID = "01DC909554";      // device ID - 01h/DCh/90h/95h/54h
 
             myChip.width = Organization.x8;    // chip width - 8 bit
             myChip.bytesPP = 2048;             // page size - 2048 byte (2Kb)
             myChip.spareBytesPP = 64;          // size Spare Area - 64 byte
             myChip.pagesPB = 64;               // the number of pages per block - 64 
-            myChip.bloksPLUN = 1024;           // number of blocks in CE - 1024
+            myChip.bloksPLUN = 4096;           // number of blocks in CE - 4096
             myChip.LUNs = 1;                   // the amount of CE in the chip
             myChip.colAdrCycles = 2;           // cycles for column addressing
-            myChip.rowAdrCycles = 2;           // cycles for row addressing 
+            myChip.rowAdrCycles = 3;           // cycles for row addressing 
             myChip.vcc = Vcc.v3_3;             // supply voltage
 
 ```
@@ -75,9 +75,14 @@ Dependency injection, DI based on MEF framework is used to connect the chip to t
 
             myChip.registers.Add(                  // https://github.com/JuliProg/Wiki/wiki/ID-Register
                 "Id Register").
-                Size(4).
-                Operations("ReadId_90h");               
-                //Interpretation(ID_interpreting);
+                Size(5).
+                Operations("ReadId_90h");
+            //Interpretation(ID_interpreting);
+
+            myChip.registers.Add(
+              "Parameter Page (ONFI parameter)").
+              Size(768).
+              Operations("ReadParameterPage_ECh");
 
 ```
 # Interpretation of ID-register values ​​(optional)
@@ -88,6 +93,7 @@ Dependency injection, DI based on MEF framework is used to connect the chip to t
         
 ```
 </section>
+
 
 
 
